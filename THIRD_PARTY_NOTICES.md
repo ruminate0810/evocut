@@ -7,7 +7,7 @@
 | Generated SVG sanitizer bundle | Upstream sanitizeSvg plus LinkeDOM dependency family; see licenses/svg-sanitizer | Unmodified upstream generated implementation; dependency notices supplied separately |
 | Hershey SVG stroke fonts | Attribution/restricted-format license embedded in each SVG metadata block | Textual font sources retained with their complete original notices |
 | talking-head-recut / vtake-skills | MIT; skill-local NOTICE.md | Adapted source guidance and HTML recipes |
-| EvoCut original code and brand SVGs | Apache-2.0 | Included; no trademark-clearance claim |
+| EvoCut original code, brand SVGs, and hello example screenshot | Apache-2.0 | Included; the screenshot shows the included original title-card composition; no trademark-clearance claim |
 | Stock SFX, music and footage | Provider-specific, including Pixabay Content License | Binary media deliberately not redistributed |
 | Third-party font files and example screenshots | Individual rights not fully documented in local source | Binary assets deliberately not redistributed |
 | GSAP | Separate GSAP license, https://gsap.com/standard-license/ | Vendor binary omitted; examples may reference external/user-installed GSAP |

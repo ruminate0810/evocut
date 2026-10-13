@@ -36,7 +36,7 @@ Each example includes commands and a prompt to give your agent. These are reprod
 
 ## Quick start
 
-Install **Node.js 22+ with npm, Python 3.11+, and FFmpeg/ffprobe** first. The commands below target macOS; Linux is not yet end-to-end verified and Windows automatic setup is not supported. Repository access is required while this repo remains private.
+Install **Node.js 22+ with npm, Python 3.11+, and FFmpeg/ffprobe** first. The commands below target macOS; Linux is not yet end-to-end verified and Windows automatic setup is not supported. The repository is public: no invitation is needed to clone it.
 
 ```sh
 git clone https://github.com/ruminate0810/evocut.git

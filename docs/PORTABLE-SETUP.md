@@ -6,7 +6,7 @@ EvoCut v0.1.1 provides checkout-local setup commands. Core editing does not requ
 
 Your desktop agent must access persistent project files, execute local commands, load skills and their references, and present media for review. A chat-only application or MCP client without command execution needs an additional adapter; this version is not an MCP server.
 
-Run these commands from the EvoCut checkout. Access to the private repository is a prerequisite.
+Clone the public repository, then run these commands from the EvoCut checkout. No repository invitation is required.
 
 ## 1. Check without installing
 
