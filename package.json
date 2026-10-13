@@ -2,7 +2,7 @@
   "name": "evocut",
   "version": "0.1.0",
   "private": true,
-  "description": "Agent-operable video editing and reproducible releases built on HyperFrames",
+  "description": "Video editing for AI agents with linked edits, media management, reproducible releases and evidence-bound quality checks",
   "license": "Apache-2.0",
   "type": "module",
   "engines": {"node": ">=22"},

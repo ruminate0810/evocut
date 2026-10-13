@@ -4,7 +4,7 @@
 
 **Agent-operable video editing with reproducible releases, conservative linked edits, and evidence-bound quality checks.**
 
-EvoCut extends the [HyperFrames](https://github.com/heygen-com/hyperframes) HTML video engine. It is not a new foundation model or an independent renderer, and is not endorsed by HeyGen. The upstream package, protocols and attribution remain intact.
+EvoCut is a video-editing toolkit designed for AI agents. It brings project-aware editing, media and voice management, reproducible rendering, and quality checks into one workflow, with explicit controls for reviewing, releasing, and rolling back changes.
 
 This repository is prepared for open-source distribution under Apache-2.0, with third-party exceptions documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Repository visibility is a separate owner decision. `private: true` in package.json prevents accidental **npm** publication; it does not change the source license.
 
@@ -25,7 +25,7 @@ npm run evocut -- release status
 npm run evocut -- --help
 ```
 
-While the repository is private, cloning requires repository access. The explicit setup step downloads **HyperFrames 0.8.81** using the committed dependency lock, modifies only the checkout's `.runtime`, validates a release, and activates it in `.evocut-home`. It does not overwrite global commands, installed skills, or older videos. Set `EVOCUT_HOME` explicitly to select a different release home. Ordinary editing commands never download or upgrade an engine.
+While the repository is private, cloning requires repository access. The explicit setup step downloads the **pinned rendering engine** using the committed dependency lock, modifies only the checkout's `.runtime`, validates a release, and activates it in `.evocut-home`. It does not overwrite global commands, installed skills, or older videos. Set `EVOCUT_HOME` explicitly to select a different release home. Ordinary editing commands never download or upgrade an engine.
 
 Optional: `npm link` exposes `evocut` on your PATH. Do not use it to replace an existing installation without reviewing that installation first. No npm package is published by this project yet; do not use `npx evocut`.
 
@@ -76,8 +76,8 @@ or token authorized to write workflows. Local tests do not require that scope.
 npm test
 npm run audit:source
 # Deliberately prepare a separate compatible upstream candidate, then:
-npm run evocut -- brand --root /absolute/candidate/hyperframes --apply
-npm run evocut -- release stage --engine-root /absolute/candidate/hyperframes \
+npm run evocut -- brand --root /absolute/candidate/engine --apply
+npm run evocut -- release stage --engine-root /absolute/candidate/engine \
   --skills-source "$PWD/tools/evocut/skills-src" --id my-candidate --apply
 npm run evocut -- release validate my-candidate
 npm run evocut -- release promote my-candidate --apply
