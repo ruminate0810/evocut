@@ -29,7 +29,8 @@ visually reviewed in this repository.
 | Agent editing/media/animation/caption workflows, template source | skills-src |
 | Reference comparison, action/material/typography continuity, final-file review lessons | evocut/references/reference-quality.md |
 
-All `.mjs` files named above live under `tools/evocut`. The video QA dependency
+Unqualified `.mjs` filenames above live under `tools/evocut`; bootstrap files
+use explicit `scripts/` paths. The video QA dependency
 closure was extracted from a business-specific directory; no account publishing
 or financial analysis scripts were imported. Generic imported diagnostics do not
 inherit the original business defaults.

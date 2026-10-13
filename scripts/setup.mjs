@@ -4,9 +4,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
-import {ensureCommandShims} from './host.mjs';
+import {ensureCommandShims,hostEnvironment} from './host.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 process.env.EVOCUT_HOME ??= path.join(root,'.evocut-home');
+Object.assign(process.env,hostEnvironment(process.env,root));
 const args=process.argv.slice(2);
 if(args.some(a=>!['--install-engine','--help'].includes(a)))throw new Error('Unknown setup flag');
 if(args.includes('--help')){console.log('npm run setup -- --install-engine\nInstalls pinned HyperFrames 0.8.81 locally, brands, tests and promotes into EVOCUT_HOME (default: checkout/.evocut-home). No global changes.');process.exit(0);}
