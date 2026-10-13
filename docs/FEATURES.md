@@ -8,6 +8,9 @@ visually reviewed in this repository.
 
 | Improvement | Implementation |
 | --- | --- |
+| Offline per-feature readiness and explicit dependency preparation | scripts/host.mjs, requirements-*.txt |
+| Custom Agent skill roots, conflict opt-in, backup/restore and integration instructions | scripts/host.mjs |
+| Checkout-local Python selection and child-command shims, without global PATH changes | scripts/cli.mjs, scripts/setup.mjs |
 | Logo/wordmark/favicons, root help and Studio display names | branding.mjs + assets/evocut |
 | Whole browser import graph renaming to prevent old-logo remount/cache bugs | branding.mjs |
 | Hash-guarded modifications, backups and safe restoration | branding.mjs, verify.mjs |

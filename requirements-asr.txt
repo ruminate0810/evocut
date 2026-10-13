@@ -1,0 +1,5 @@
+# Optional offline QA adapter. Model weights are deliberately not installed.
+faster-whisper>=1.2,<2
+ctranslate2>=4.6,<5
+numpy>=1.26,<3
+opencc-python-reimplemented>=0.1.7,<0.2

@@ -8,7 +8,7 @@ Linked edits · Media & voice management · Reproducible releases · Evidence-bo
 
 **[Get started](#get-started)** &nbsp; / &nbsp; **[Workflow](#from-brief-to-reviewable-output)** &nbsp; / &nbsp; **[Documentation](#go-deeper)** &nbsp; / &nbsp; **[中文](README.zh-CN.md)**
 
-`v0.1.0 · Early-stage` &nbsp; `Node.js 22+` &nbsp; `macOS / Linux targets` &nbsp; `Apache-2.0¹`
+`v0.1.1 · Early-stage` &nbsp; `Node.js 22+` &nbsp; `macOS / Linux targets` &nbsp; `Apache-2.0¹`
 
 </div>
 
@@ -76,7 +76,9 @@ Stage an isolated release, validate its engine, tools and skills, then promote d
 
 ## Get started
 
-**Requirements:** Node.js 22+, npm, Python 3.10+, FFmpeg/ffprobe. Rendering also needs a supported Chromium browser and its platform dependencies. Windows has not been validated.
+**Requirements:** Node.js 22+, npm, Python 3.11+, FFmpeg/ffprobe. Rendering also needs a supported Chromium browser and its platform dependencies. Windows has not been validated.
+
+**Using another computer or desktop Agent?** Start with [portable setup](docs/PORTABLE-SETUP.md): offline environment checks, feature-scoped preparation and explicit skill-directory binding. No Codex installation is required for the core editor.
 
 ### 1. Set up an isolated checkout
 
@@ -133,9 +135,9 @@ See the [full capability inventory and limits](docs/FEATURES.md). Finance analys
 
 ## Tested, with the evidence in view
 
-| Initial local validation · 2026-10-13 | Result |
+| Local validation · 2026-10-13 | Result |
 | :--- | :--- |
-| Node regression tests | **102 passed** |
+| Node regression tests | **120 passed** |
 | Python regression tests | **115 passed** |
 | Skill entrypoint metadata | **29 validated** |
 | Included sample | **Rendered to MP4; technical QA passed** |

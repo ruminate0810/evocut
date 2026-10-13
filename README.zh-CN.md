@@ -8,7 +8,7 @@
 
 **[开始使用](#开始使用)** &nbsp; / &nbsp; **[功能清单](docs/FEATURES.md)** &nbsp; / &nbsp; **[English](README.md)**
 
-`v0.1.0 · 早期版本` &nbsp; `Node.js 22+` &nbsp; `面向 macOS / Linux` &nbsp; `Apache-2.0¹`
+`v0.1.1 · 早期版本` &nbsp; `Node.js 22+` &nbsp; `面向 macOS / Linux` &nbsp; `Apache-2.0¹`
 
 </div>
 
@@ -76,7 +76,9 @@ EvoCut 将剪辑、素材管理、预览、渲染与质量检查串成一套 AI 
 
 ## 开始使用
 
-需要 Node.js 22+、npm、Python 3.10+、FFmpeg/ffprobe。渲染还需要受支持的 Chromium 浏览器及平台依赖；尚未验证 Windows。
+需要 Node.js 22+、npm、Python 3.11+、FFmpeg/ffprobe。渲染还需要受支持的 Chromium 浏览器及平台依赖；尚未验证 Windows。
+
+**要换电脑或接入另一个桌面 Agent？** 先看[跨电脑与 Agent 接入指南](docs/PORTABLE-SETUP.md)：只读环境检测、按功能准备依赖、指定技能目录安装。基础剪辑不要求安装 Codex。
 
 ### 1. 安装到独立目录
 
@@ -136,7 +138,7 @@ EvoCut 是**剪辑工具包**，不是视频生成模型，也不是自动发布
 
 | 2026-10-13 本地验证 | 结果 |
 | :--- | :--- |
-| Node 回归测试 | **102 项通过** |
+| Node 回归测试 | **120 项通过** |
 | Python 回归测试 | **115 项通过** |
 | 技能入口元数据 | **29 组通过校验** |
 | 内置示例 | **已导出 MP4，技术 QA 通过** |

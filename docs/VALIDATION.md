@@ -1,4 +1,24 @@
-# Initial validation — 2026-10-13
+# Validation record
+
+## Portable setup v0.1.1 — 2026-10-13
+
+- Full regression suite: 120 Node tests and 115 Python tests passed on macOS.
+- 18 new bootstrap tests cover read-only diagnostics, credential exclusion,
+  interpreter selection, dry-run behavior, download consent, custom Agent roots,
+  conflict refusal, backup/restore, path aliases and local child-command shims.
+- A separate empty release home was initialized and validated using the already
+  installed pinned engine. This was not a cold network or another-OS install.
+- The complete release skill tree (41 entries including compatibility aliases
+  and shared references) was bound to an isolated Agent directory, then restored.
+- Real render/QA prerequisite checks succeeded. ASR correctly reported a missing
+  explicit model selection; beats correctly reported missing optional packages.
+- No optional Python packages or model weights were downloaded in this turn;
+  feature install plans and guards were tested, not every optional installer.
+- The existing global launcher and production release pointer were unchanged.
+- Windows apply paths fail explicitly; Linux/Windows end-to-end execution and
+  compatibility with an unnamed desktop Agent remain unverified.
+
+## Initial distribution — 2026-10-13
 
 Performed on macOS arm64 with Node 24 and HyperFrames 0.8.81:
 

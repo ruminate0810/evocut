@@ -1,6 +1,6 @@
 # Contributing
 
-Use Node 22+, Python 3.10+, and FFmpeg. Install optional Python test dependencies
+Use Node 22+, Python 3.11+, and FFmpeg. Install optional Python test dependencies
 in a virtual environment with `requirements-dev.txt`; set `EVOCUT_PYTHON`.
 Run `npm test` before submitting changes. Integration tests use temporary files;
 do not test mutation commands on another person's video or global installation.

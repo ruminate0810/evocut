@@ -1,6 +1,6 @@
 {
   "name": "evocut",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Video editing for AI agents with linked edits, media management, reproducible releases and evidence-bound quality checks",
   "license": "Apache-2.0",
