@@ -8,7 +8,7 @@
 
 Edit clips, preview changes, export MP4, and check the result.
 
-[Examples](#examples) · [Quick start](#quick-start) · [Use with an agent](#use-with-an-agent) · [简体中文](README.zh-CN.md)
+[Examples](#examples) · [Quick start](#quick-start) · [Use with an agent](#use-with-an-agent) · [Commands](#everyday-commands)
 
 `v0.1.1 · Early access` · `macOS tested` · `CLI + Agent skills`
 
@@ -28,9 +28,9 @@ Bring a desktop agent that can read files and run commands. EvoCut supplies the 
 
 | Try it | What you get |
 | --- | --- |
-| [Export a title card](docs/EXAMPLES.md#1-片头导出--export-a-title-card) | The included 2-second project → an MP4. Actual frame above. |
-| [Cut cards and captions together](docs/EXAMPLES.md#2-画面与字幕一起剪--cut-a-card-and-its-caption-together) | A 6-second text example → 4 seconds, with verified undo. |
-| [Check the exported file](docs/EXAMPLES.md#3-导出后检查--check-the-actual-mp4) | Source-bound technical checks → a JSON report. |
+| [Export a title card](docs/EXAMPLES.md#1-export-a-title-card) | The included 2-second project → an MP4. Actual frame above. |
+| [Cut cards and captions together](docs/EXAMPLES.md#2-cut-a-card-and-its-caption-together) | A 6-second text example → 4 seconds, with verified undo. |
+| [Check the exported file](docs/EXAMPLES.md#3-check-the-actual-mp4) | Source-bound technical checks → a JSON report. |
 
 Each example includes commands and a prompt to give your agent. These are reproducible technical demos, not customer productions or generated-footage showcases.
 
@@ -78,6 +78,7 @@ Paste its output into your agent, followed by:
 ```text
 Use this EvoCut launcher and preserve its environment settings.
 Read skillEntry and its referenced instructions first.
+Use English for narration, captions, on-screen text, and reports.
 Inspect my video project, explain your edit plan, then make the requested edits.
 Show the checked preview before exporting. Do not upgrade my existing projects
 or call paid generation services without my approval.
