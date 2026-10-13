@@ -1,5 +1,7 @@
 # 跨电脑与桌面 Agent 接入 / Portable setup
 
+已经装好，只想让 Agent 调用？直接看 [Agent 快速接入 / Agent quick start](AGENT-QUICKSTART.md)。
+
 EvoCut v0.1.1 增加独立的安装管理入口。它不要求 Codex，也不会自动修改所有
 Agent 的技能目录。桌面 Agent 必须能够访问持久项目文件、执行本地命令、加载
 技能及其引用，并将图片、视频和音频交给用户检查。仅有聊天或 MCP 客户端而
@@ -31,8 +33,11 @@ npm run evocut -- env doctor --feature asr --json
 | `core` | 锁定引擎、版本验证和本仓库运行环境 | Node.js 22+、Python 3.11+ |
 | `render` | core + 渲染浏览器 | FFmpeg、ffprobe、系统浏览器运行库 |
 | `qa` | NumPy、SciPy、Pillow | FFmpeg、ffprobe |
-| `asr` | faster-whisper、CTranslate2、NumPy、OpenCC | 完整本地模型和 FFmpeg |
-| `beats` | librosa、NumPy、soundfile | FFmpeg、ffprobe |
+| `asr` | QA 的 faster-whisper 路径：CTranslate2、NumPy、OpenCC | 完整本地模型和 FFmpeg |
+| `beats` | music-to-video 的 Python 分析器：librosa、NumPy、soundfile | FFmpeg、ffprobe |
+
+这两项不是所有同类工具的通用安装包：媒体转写技能默认使用的 Parakeet /
+whisper.cpp 需另行准备；Studio 的 `evocut beats` 使用 Chrome，不使用上述 Python 分析器。
 
 先看计划，再执行：
 
