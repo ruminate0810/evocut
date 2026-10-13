@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>EvoCut linked edit example</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 640px; height: 360px; background: #15181b; color: #f5f7f8; font-family: sans-serif; }
+    #main { position: relative; width: 100%; height: 100%; overflow: hidden; }
+    .card { position: absolute; left: 40px; top: 42px; width: 560px; height: 188px; padding: 32px; border: 2px solid #c5f541; font-size: 44px; font-weight: 700; }
+    .caption { position: absolute; left: 40px; top: 264px; width: 560px; font-size: 24px; color: #c5f541; }
+  </style>
+</head>
+<body>
+  <main id="main" data-composition-id="linked-edit" data-width="640" data-height="360" data-duration="6" data-fps="30" data-no-timeline>
+    <div id="card-intro" class="clip card" data-start="0" data-duration="2" data-track-index="0" data-evocut-role="graphic" data-evocut-link="intro">01 / Start with a hook</div>
+    <div id="caption-intro" class="clip caption" data-start="0" data-duration="2" data-track-index="1" data-evocut-role="subtitle" data-evocut-link="intro">Keep this opening.</div>
+    <div id="card-middle" class="clip card" data-start="2" data-duration="2" data-track-index="0" data-evocut-role="graphic" data-evocut-link="middle">02 / Cut this detour</div>
+    <div id="caption-middle" class="clip caption" data-start="2" data-duration="2" data-track-index="1" data-evocut-role="subtitle" data-evocut-link="middle">Remove this caption with its card.</div>
+    <div id="card-ending" class="clip card" data-start="4" data-duration="2" data-track-index="0" data-evocut-role="graphic" data-evocut-link="ending">03 / Get to the point</div>
+    <div id="caption-ending" class="clip caption" data-start="4" data-duration="2" data-track-index="1" data-evocut-role="subtitle" data-evocut-link="ending">Move this ending and caption together.</div>
+  </main>
+</body>
+</html>

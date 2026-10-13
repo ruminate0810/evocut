@@ -8,7 +8,7 @@
 
 Edit clips, preview changes, export MP4, and check the result.
 
-[Quick start](#quick-start) · [Use with an agent](#use-with-an-agent) · [Commands](#everyday-commands) · [简体中文](README.zh-CN.md)
+[Examples](#examples) · [Quick start](#quick-start) · [Use with an agent](#use-with-an-agent) · [简体中文](README.zh-CN.md)
 
 `v0.1.1 · Early access` · `macOS tested` · `CLI + Agent skills`
 
@@ -21,6 +21,18 @@ Edit clips, preview changes, export MP4, and check the result.
 - **Deliver:** preview a project, export an MP4, and check the exported file.
 
 Bring a desktop agent that can read files and run commands. EvoCut supplies the editing tools and skills—not a video-generation model. No Codex installation is required for core editing. [Capabilities and limits →](docs/FEATURES.md)
+
+## Examples
+
+<a href="docs/EXAMPLES.md"><img src="assets/evocut/examples/hello.png" alt="Actual frame from the 2-second hello export" width="480"></a>
+
+| Try it | What you get |
+| --- | --- |
+| [Export a title card](docs/EXAMPLES.md#1-片头导出--export-a-title-card) | The included 2-second project → an MP4. Actual frame above. |
+| [Cut cards and captions together](docs/EXAMPLES.md#2-画面与字幕一起剪--cut-a-card-and-its-caption-together) | A 6-second text example → 4 seconds, with verified undo. |
+| [Check the exported file](docs/EXAMPLES.md#3-导出后检查--check-the-actual-mp4) | Source-bound technical checks → a JSON report. |
+
+Each example includes commands and a prompt to give your agent. These are reproducible technical demos, not customer productions or generated-footage showcases.
 
 ## Quick start
 

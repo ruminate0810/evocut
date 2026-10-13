@@ -8,7 +8,7 @@
 
 剪镜头、调字幕、预览效果、导出 MP4、检查成片。
 
-[开始使用](#开始使用) · [Agent 调用](#交给-agent-调用) · [常用命令](#常用命令) · [English](README.md)
+[案例](#案例) · [开始使用](#开始使用) · [Agent 调用](#交给-agent-调用) · [English](README.md)
 
 `v0.1.1 · 早期版本` · `macOS 已实测` · `命令行 + Agent 技能`
 
@@ -21,6 +21,18 @@
 - **交付：**预览项目、导出 MP4，检查实际导出的文件。
 
 你提供能读写文件、执行命令的桌面 Agent；EvoCut 提供剪辑工具与技能。它不是视频生成模型，基础剪辑不要求安装 Codex。[完整能力与限制 →](docs/FEATURES.md)
+
+## 案例
+
+<a href="docs/EXAMPLES.md"><img src="assets/evocut/examples/hello.png" alt="hello 两秒片头实际导出画面" width="480"></a>
+
+| 可以试什么 | 能得到什么 |
+| --- | --- |
+| [导出一个片头](docs/EXAMPLES.md#1-片头导出--export-a-title-card) | 内置 2 秒项目 → MP4，上图为实际成片帧。 |
+| [图文和字幕一起剪](docs/EXAMPLES.md#2-画面与字幕一起剪--cut-a-card-and-its-caption-together) | 6 秒图文示例 → 4 秒，已验证可撤销。 |
+| [检查导出的文件](docs/EXAMPLES.md#3-导出后检查--check-the-actual-mp4) | 检查源文件绑定、解码等 → JSON 报告。 |
+
+每个案例都有命令和可复制的 Agent 提示词。这些是可复现的技术示例，不冒充客户作品或生成效果展示。
 
 ## 开始使用
 
