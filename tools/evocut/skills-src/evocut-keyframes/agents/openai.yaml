@@ -1,0 +1,8 @@
+interface:
+  display_name: "EvoCut Keyframes"
+  short_description: "Author seek-safe video keyframes"
+  default_prompt: "Use $evocut-keyframes to author seek-safe 2D/3D keyframes and\
+    \ verify them with the CLI."
+  brand_color: "#C5F541"
+  icon_small: "./assets/evocut-icon.png"
+  icon_large: "./assets/evocut-icon.svg"

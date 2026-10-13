@@ -1,0 +1,5 @@
+# Core QA uses Python's standard library + system FFmpeg.
+# Optional waveform analysis / frame review helpers and their regression tests:
+numpy>=1.26,<3
+scipy>=1.11,<2
+Pillow>=10,<13

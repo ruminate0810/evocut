@@ -1,0 +1,171 @@
+{
+  "note": "License texts from the LinkeDOM 0.18.12 dependency family used by the upstream generated SVG sanitizer; not a claim of exact bundled dependency versions.",
+  "dependencies": [
+    {
+      "name": "linkedom",
+      "version": "0.18.12",
+      "license": "ISC",
+      "notices": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "css-select",
+      "version": "5.2.2",
+      "license": "BSD-2-Clause",
+      "notices": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "boolbase",
+      "version": "1.0.0",
+      "license": "ISC",
+      "notices": []
+    },
+    {
+      "name": "css-what",
+      "version": "6.2.2",
+      "license": "BSD-2-Clause",
+      "notices": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "domhandler",
+      "version": "5.0.3",
+      "license": "BSD-2-Clause",
+      "notices": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "domelementtype",
+      "version": "2.3.0",
+      "license": "BSD-2-Clause",
+      "notices": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "domutils",
+      "version": "3.2.2",
+      "license": "BSD-2-Clause",
+      "notices": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "dom-serializer",
+      "version": "2.0.0",
+      "license": "MIT",
+      "notices": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "entities",
+      "version": "4.5.0",
+      "license": "BSD-2-Clause",
+      "notices": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "domelementtype",
+      "version": "2.3.0",
+      "license": "BSD-2-Clause",
+      "notices": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "nth-check",
+      "version": "2.1.1",
+      "license": "BSD-2-Clause",
+      "notices": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "cssom",
+      "version": "0.5.0",
+      "license": "MIT",
+      "notices": [
+        "LICENSE.txt"
+      ]
+    },
+    {
+      "name": "html-escaper",
+      "version": "3.0.3",
+      "license": "MIT",
+      "notices": [
+        "LICENSE.txt"
+      ]
+    },
+    {
+      "name": "htmlparser2",
+      "version": "10.1.0",
+      "license": "MIT",
+      "notices": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "domelementtype",
+      "version": "2.3.0",
+      "license": "BSD-2-Clause",
+      "notices": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "domhandler",
+      "version": "5.0.3",
+      "license": "BSD-2-Clause",
+      "notices": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "domutils",
+      "version": "3.2.2",
+      "license": "BSD-2-Clause",
+      "notices": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "dom-serializer",
+      "version": "2.0.0",
+      "license": "MIT",
+      "notices": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "entities",
+      "version": "4.5.0",
+      "license": "BSD-2-Clause",
+      "notices": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "entities",
+      "version": "7.0.1",
+      "license": "BSD-2-Clause",
+      "notices": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "uhyphen",
+      "version": "0.2.0",
+      "license": "ISC",
+      "notices": [
+        "LICENSE"
+      ]
+    }
+  ]
+}

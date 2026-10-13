@@ -1,0 +1,7 @@
+interface:
+  display_name: "EvoCut Core"
+  short_description: "Author videos with EvoCut Core"
+  default_prompt: "Use $evocut-core to author and verify a video composition."
+  brand_color: "#C5F541"
+  icon_small: "./assets/evocut-icon.png"
+  icon_large: "./assets/evocut-icon.svg"

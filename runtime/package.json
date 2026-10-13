@@ -1,0 +1,6 @@
+{
+  "name": "evocut-engine-runtime",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {"hyperframes": "0.8.81"}
+}

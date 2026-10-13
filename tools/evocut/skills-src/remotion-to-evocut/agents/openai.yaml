@@ -1,0 +1,7 @@
+interface:
+  display_name: "Remotion to EvoCut"
+  short_description: "Author videos with Remotion to EvoCut"
+  default_prompt: "Use $remotion-to-evocut to author and verify a video composition."
+  brand_color: "#C5F541"
+  icon_small: "./assets/evocut-icon.png"
+  icon_large: "./assets/evocut-icon.svg"

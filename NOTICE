@@ -1,0 +1,15 @@
+EvoCut
+Copyright 2026 EvoCut contributors
+
+This product includes software and documentation derived from HyperFrames
+by HeyGen, Inc. (https://github.com/heygen-com/hyperframes), Apache-2.0.
+EvoCut modifies presentation/branding and agent guidance, and adds managed
+releases, project-aware launching, linked edits, media/voice utilities,
+render receipts and video quality tooling. It is not an official HeyGen product.
+
+The vendored Acorn parser is MIT-licensed; its copyright and license remain
+in tools/evocut/vendor/acorn/LICENSE.
+The talking-head-recut guidance includes adaptations of vtake-skills by
+leeoxiang (MIT); its full notice remains in that skill's NOTICE.md.
+Third-party names, services, dependencies and optional assets retain their
+respective rights. See THIRD_PARTY_NOTICES.md.

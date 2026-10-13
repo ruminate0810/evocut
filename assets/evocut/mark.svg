@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-label="EvoCut">
+  <g fill="#C5F541">
+    <path d="M28 22h80L92 46H20V30a8 8 0 0 1 8-8Z"/>
+    <path d="M28 52h48l22 12-22 12H20V60a8 8 0 0 1 8-8Z"/>
+    <path d="M20 82h72l16 24H28a8 8 0 0 1-8-8V82Z"/>
+  </g>
+</svg>

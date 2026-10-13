@@ -1,0 +1,18 @@
+{
+  "name": "evocut",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Agent-operable video editing and reproducible releases built on HyperFrames",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {"node": ">=22"},
+  "bin": {"evocut": "scripts/cli.mjs"},
+  "scripts": {
+    "evocut": "node scripts/cli.mjs",
+    "setup": "node scripts/setup.mjs",
+    "test": "node scripts/test.mjs",
+    "test:node": "node --test tools/evocut/*.test.mjs scripts/*.test.mjs",
+    "audit:source": "node scripts/audit-source.mjs"
+  },
+  "repository": {"type": "git", "url": "https://github.com/ruminate0810/evocut.git"}
+}

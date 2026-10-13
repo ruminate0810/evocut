@@ -1,0 +1,8 @@
+* text=auto
+# Keep imported dependencies byte-for-byte; their upstream whitespace is intentional.
+tools/evocut/vendor/** -whitespace
+tools/evocut/skills-src/media-use/scripts/lib/svg-sanitize.mjs -whitespace
+tools/evocut/skills-src/embedded-captions/assets/strokefonts/** -whitespace
+LICENSE -whitespace
+tools/evocut/upstream-LICENSE.txt -whitespace
+licenses/** -whitespace
