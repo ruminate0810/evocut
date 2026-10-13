@@ -1,16 +1,84 @@
-# EvoCut
+<div align="center">
 
-<img src="assets/evocut/wordmark-dark.svg" alt="EvoCut" width="240">
+<img src="assets/evocut/readme-hero.svg" alt="EvoCut — Video editing, built for agents. Brief → Edit → Verify → Export." width="100%">
 
-**Agent-operable video editing with reproducible releases, conservative linked edits, and evidence-bound quality checks.**
+### Creative direction from you. Editing tools for your agent.
 
-EvoCut is a video-editing toolkit designed for AI agents. It brings project-aware editing, media and voice management, reproducible rendering, and quality checks into one workflow, with explicit controls for reviewing, releasing, and rolling back changes.
+Linked edits · Media & voice management · Reproducible releases · Evidence-bound QA
 
-This repository is prepared for open-source distribution under Apache-2.0, with third-party exceptions documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Repository visibility is a separate owner decision. `private: true` in package.json prevents accidental **npm** publication; it does not change the source license.
+**[Get started](#get-started)** &nbsp; / &nbsp; **[Workflow](#from-brief-to-reviewable-output)** &nbsp; / &nbsp; **[Documentation](#go-deeper)** &nbsp; / &nbsp; **[中文](README.zh-CN.md)**
 
-## Quick start
+`v0.1.0 · Early-stage` &nbsp; `Node.js 22+` &nbsp; `macOS / Linux targets` &nbsp; `Apache-2.0¹`
 
-Requirements: Node.js 22+, npm, Python 3.10+, FFmpeg/ffprobe. Rendering additionally needs a supported Chromium browser and the upstream renderer's platform dependencies. macOS and Linux are the initial targets; Windows has not been validated.
+</div>
+
+---
+
+## Give your agent an editing toolkit, not just a render command.
+
+EvoCut brings editing, media organization, preview, rendering and quality checks into an agent-operable workflow. Keep footage, captions and sound connected. Make changes explicitly. Know which project source produced the file you review.
+
+**For creators working with coding agents, developers building video workflows, and teams that need changes they can inspect and reproduce.** EvoCut provides the tools and skill guidance; you bring the agent, the creative brief and licensed media.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 01 / Edit together
+
+Cut or move supported linked clips with their captions, voice, sound effects and graphics. Conflict checks and undo help protect work already in progress.
+
+[Linked editing →](tools/evocut/SEMANTIC-EDIT.md)
+
+</td>
+<td width="50%" valign="top">
+
+### 02 / Keep media organized
+
+Search assets in Chinese or English, deduplicate by hash, record source metadata, and retain confirmed voice profiles and pronunciation rules.
+
+[Media & voices →](tools/evocut/MEDIA-LIBRARY.md)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 03 / Review the actual result
+
+Bind successful renders to their source. Check decoding, black frames, audio and supplied transcription evidence. Separate technical results from human approval.
+
+[Quality checks →](tools/video_qa/QUALITY_GATE.md)
+
+</td>
+<td width="50%" valign="top">
+
+### 04 / Evolve without surprises
+
+Stage an isolated release, validate its engine, tools and skills, then promote deliberately. Retain project pins and a rollback path.
+
+[Managed releases →](tools/evocut/LOCAL-WORKFLOW.md)
+
+</td>
+</tr>
+</table>
+
+## From brief to reviewable output
+
+| You direct | Your agent uses EvoCut to… | You can inspect |
+| :--- | :--- | :--- |
+| **Define the piece** | Apply relevant guidance from 29 video skill families | Editable source and explicit asset choices |
+| **Refine the cut** | Preview, cut, move and undo supported linked elements | The composition, change results and remake plans |
+| **Check the delivery** | Render an MP4 and run source-bound technical QA | The file, render receipt and QA report |
+| **Keep what works** | Validate and pin a release before adopting changes | Versioned snapshots and integrity checks |
+
+*The banner is a workflow illustration, not a Studio screenshot. Skill recipes may require additional licensed media and tools.*
+
+## Get started
+
+**Requirements:** Node.js 22+, npm, Python 3.10+, FFmpeg/ffprobe. Rendering also needs a supported Chromium browser and its platform dependencies. Windows has not been validated.
+
+### 1. Set up an isolated checkout
 
 ```sh
 git clone https://github.com/ruminate0810/evocut.git
@@ -18,69 +86,87 @@ cd evocut
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements-dev.txt
 export EVOCUT_PYTHON="$PWD/.venv/bin/python"
-npm test
 npm run setup -- --install-engine
-npm run evocut -- about
-npm run evocut -- release status
-npm run evocut -- --help
 ```
 
-While the repository is private, cloning requires repository access. The explicit setup step downloads the **pinned rendering engine** using the committed dependency lock, modifies only the checkout's `.runtime`, validates a release, and activates it in `.evocut-home`. It does not overwrite global commands, installed skills, or older videos. Set `EVOCUT_HOME` explicitly to select a different release home. Ordinary editing commands never download or upgrade an engine.
+Setup explicitly downloads the pinned engine, validates a release, and activates it inside this checkout. **It does not replace global commands, installed skills or existing videos.** Private-repository access is required while the repository remains private.
 
-Optional: `npm link` exposes `evocut` on your PATH. Do not use it to replace an existing installation without reviewing that installation first. No npm package is published by this project yet; do not use `npx evocut`.
-
-## Example
+### 2. Preview and render the included example
 
 ```sh
 npm run evocut -- check examples/hello --json
 npm run evocut -- preview examples/hello
+# Stop the preview server before continuing in the same terminal.
 npm run evocut -- render examples/hello -o renders/hello.mp4
+```
+
+### 3. Check the exported file
+
+```sh
 npm run evocut -- qa --project examples/hello --video renders/hello.mp4 \
   --type silent --run --json-output renders/qa.json
 ```
 
-QA exit `3` means technical checks passed but required human review remains pending. It is not an encoding failure, nor a claim that the video looks good. Browser installation, if needed, is an explicit upstream setup action; it is not included in `npm test`.
+The example is a **2-second silent smoke test**, not a showcase of generated footage. QA exit `3` means technical checks passed but required human review is still pending. Review the actual MP4 before approving a delivery.
 
-## What EvoCut adds
+<details>
+<summary><strong>Installation notes & safeguards</strong></summary>
 
-| Capability | Included behavior | Boundary |
-| --- | --- | --- |
-| Managed releases | Stage, hash verification, test, promote, rollback | No silent upgrades of live engines or old project pins |
-| EvoCut branding | Guarded AST edits, consistent logo, cache-safe browser module graph | Preserves upstream names in APIs and runtime schemas |
-| Project-aware CLI | Exact engine-pin resolution; pass-through CLI arguments | Missing engines fail instead of downloading silently |
-| Linked editing | Cut/move/undo linked footage, captions, voice, SFX and graphics | Flat marked clips on 0.8.81; complex cases return pending |
-| Shot remake | Source-bound remake request plans | Does not generate or replace footage automatically |
-| Media library | Chinese/English keyword search, SHA dedup, tags, preview and explicit import | No bundled stock-media library or license guarantee |
-| Voice profiles | Confirmed voice IDs, pronunciation and reference hashes | No default voice, credentials or paid synthesis |
-| Render receipts | Bind an unchanged composition to a new successful MP4 | Index binding, not the full external dependency graph |
-| Video QA | Decode, black frames, audio, supplied ASR, source and evidence checks | Technical checks do not certify acting or listening quality |
-| Agent skills | 29 video-related skill families, templates and quality guidance | Optional recipes need their own licensed media/tools |
+- Runtime files live in `.runtime`; managed releases live in `.evocut-home`. Set `EVOCUT_HOME` explicitly to use another location.
+- Normal editing commands never download or upgrade the engine silently.
+- The compiler may fetch default fonts. Cold-machine rendering is not guaranteed to work offline.
+- Browser installation is a separate explicit setup action, not part of `npm test`.
+- No npm package is published yet: do not use `npx evocut`. Optional `npm link` can expose a global command, but review any existing installation first.
 
-See [feature coverage](docs/FEATURES.md), [release workflow](tools/evocut/LOCAL-WORKFLOW.md), [linked editing](tools/evocut/SEMANTIC-EDIT.md), [media and voices](tools/evocut/MEDIA-LIBRARY.md), and [QA](tools/video_qa/QUALITY_GATE.md).
+</details>
 
-## Scope
+## Useful tools. Honest boundaries.
 
-Included: the editing/tooling improvements and general video-making guidance. Excluded: finance analysis, social publishing, account login automation, provider credentials, private voice IDs, personal videos, chat logs, machine caches, and third-party stock-media binaries.
+EvoCut is an **editing toolkit**, not a video-generation model or an automatic publishing service.
 
-Some upstream HTML recipes reference optional fonts/music/images. They are source examples, not complete media packs. Provide licensed assets before rendering those recipes; never assume an absent asset is bundled. The `examples/hello` smoke composition needs no user media, GSAP or paid API. The upstream compiler may fetch its default fonts; rendering is not guaranteed to be network-free on a cold machine.
+- **Linked editing is conservative:** supported flat marked clips on the pinned engine; complex cases remain pending.
+- **Shot remake creates a plan:** it does not automatically generate or replace footage.
+- **Technical QA is not creative approval:** it cannot certify acting, identity, perfect lip sync or faithful style. Render receipts bind the composition index, not every external dependency.
+- **Bring licensed assets and your own providers:** no stock-media pack, private voices, model credentials or paid synthesis is bundled. Asset search uses keywords, not acoustic understanding.
 
-## Development and upstream updates
+See the [full capability inventory and limits](docs/FEATURES.md). Finance analysis, social publishing and account login workflows are intentionally out of scope.
 
-The GitHub Actions configuration is provided as
-[`docs/ci/github-actions.yml`](docs/ci/github-actions.yml). CI is not enabled yet:
-the initial upload credentials lacked workflow-write permission. To enable it,
-copy the template to `.github/workflows/test.yml` and commit/push using an account
-or token authorized to write workflows. Local tests do not require that scope.
+## Tested, with the evidence in view
+
+| Initial local validation · 2026-10-13 | Result |
+| :--- | :--- |
+| Node regression tests | **102 passed** |
+| Python regression tests | **115 passed** |
+| Skill entrypoint metadata | **29 validated** |
+| Included sample | **Rendered to MP4; technical QA passed** |
+
+These are recorded macOS results, not a live CI badge or a promise that every template has been rendered. [Validation details →](docs/VALIDATION.md)
+
+## Go deeper
+
+| Create & edit | Maintain & contribute |
+| :--- | :--- |
+| [Agent skills entrypoint](tools/evocut/skills-src/evocut/SKILL.md) | [Release workflow](tools/evocut/LOCAL-WORKFLOW.md) |
+| [Linked edits & undo](tools/evocut/SEMANTIC-EDIT.md) | [Feature inventory](docs/FEATURES.md) |
+| [Media library & voices](tools/evocut/MEDIA-LIBRARY.md) | [Contributing](CONTRIBUTING.md) |
+| [Video QA](tools/video_qa/QUALITY_GATE.md) | [Security](SECURITY.md) |
 
 ```sh
 npm test
 npm run audit:source
-# Deliberately prepare a separate compatible upstream candidate, then:
-npm run evocut -- brand --root /absolute/candidate/engine --apply
-npm run evocut -- release stage --engine-root /absolute/candidate/engine \
-  --skills-source "$PWD/tools/evocut/skills-src" --id my-candidate --apply
-npm run evocut -- release validate my-candidate
-npm run evocut -- release promote my-candidate --apply
+npm run evocut -- --help
 ```
 
-Do not patch a running release. Unsupported upstream AST shapes are rejected. Increasing the upstream version requires testing and may require updating the patcher and argument schemas. See [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md).
+**CI status:** a [GitHub Actions template](docs/ci/github-actions.yml) is provided but not enabled: the initial upload credentials lacked workflow-write permission. Linux CI has not yet been verified. See [development and engine updates](docs/DEVELOPMENT.md) for activation and release steps.
+
+---
+
+<div align="center">
+
+**EvoCut — video editing, built for agents.**
+
+[English](README.md) · [简体中文](README.zh-CN.md) · [Contribute](CONTRIBUTING.md) · [Security](SECURITY.md)
+
+</div>
+
+¹ Apache-2.0 with third-party exceptions: [LICENSE](LICENSE), [NOTICE](NOTICE), [third-party notices](THIRD_PARTY_NOTICES.md). Repository visibility is independent of licensing; `private: true` in package.json prevents accidental npm publication.

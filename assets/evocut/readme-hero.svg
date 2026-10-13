@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="780" viewBox="0 0 1280 780" role="img" aria-labelledby="title desc">
+  <title id="title">EvoCut — Video editing, built for agents.</title>
+  <desc id="desc">A dark editorial graphic in EvoCut lime. A conceptual workflow links a creative brief to editing, verification and export. Workflow illustration, not a Studio screenshot.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#151D18"/><stop offset=".65" stop-color="#0C100F"/><stop offset="1" stop-color="#182313"/></linearGradient>
+    <linearGradient id="clip" x2="1"><stop stop-color="#C5F541"/><stop offset="1" stop-color="#87AC2A"/></linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#C5F541" stroke-opacity=".055"/></pattern>
+  </defs>
+  <rect width="1280" height="780" rx="24" fill="url(#bg)"/>
+  <rect width="1280" height="780" rx="24" fill="url(#grid)"/>
+  <g transform="translate(55 38) scale(.43)" fill="#C5F541"><path d="M28 22h80L92 46H20V30a8 8 0 0 1 8-8Z"/><path d="M28 52h48l22 12-22 12H20V60a8 8 0 0 1 8-8Z"/><path d="M20 82h72l16 24H28a8 8 0 0 1-8-8V82Z"/></g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="118" y="80" fill="#F4F6EE" font-size="36" font-weight="700" letter-spacing="-1">EvoCut</text>
+    <text x="1218" y="74" text-anchor="end" fill="#C5F541" font-size="18" letter-spacing="3">THE AGENT EDITING TOOLKIT</text>
+    <text x="64" y="186" fill="#F4F6EE" font-size="76" font-weight="700" letter-spacing="-3">Video editing,</text>
+    <text x="64" y="270" fill="#C5F541" font-size="76" font-weight="700" letter-spacing="-3">built for agents.</text>
+    <text x="68" y="324" fill="#B8C3B5" font-size="25">Your creative direction. Explicit edits. Reviewable results.</text>
+    <g transform="translate(936 141)" fill="#C5F541"><path d="M0 18h217l-43 45H0z" opacity=".14"/><path d="M0 80h147l48 33-48 33H0z" opacity=".45"/><path d="M0 165h174l43 45H0z"/></g>
+    <rect x="64" y="385" width="1152" height="270" rx="16" fill="#121914" stroke="#354333"/>
+    <text x="90" y="425" fill="#98A791" font-size="17" letter-spacing="2">LINKED EDITING / WORKFLOW ILLUSTRATION</text>
+    <text x="1188" y="425" fill="#C5F541" font-size="17" text-anchor="end">ONE CHANGE. CONNECTED TRACKS.</text>
+    <path d="M90 447h1100" stroke="#2B3829"/>
+    <text x="92" y="491" fill="#B8C3B5" font-size="20">FOOTAGE</text><text x="92" y="550" fill="#B8C3B5" font-size="20">CAPTIONS</text><text x="92" y="609" fill="#B8C3B5" font-size="20">AUDIO</text>
+    <rect x="248" y="463" width="280" height="42" rx="6" fill="#263821"/><text x="266" y="491" fill="#B8C3B5" font-size="20">Opening</text>
+    <rect x="540" y="463" width="365" height="42" rx="6" fill="url(#clip)"/><text x="558" y="491" fill="#16200D" font-size="20" font-weight="700">Linked scene</text>
+    <rect x="917" y="463" width="270" height="42" rx="6" fill="#263821"/><text x="935" y="491" fill="#B8C3B5" font-size="20">Closing</text>
+    <rect x="248" y="522" width="280" height="42" rx="6" fill="#25322E"/><rect x="540" y="522" width="365" height="42" rx="6" fill="#516B3B"/><text x="558" y="550" fill="#F0F5E5" font-size="20">Timed captions</text><rect x="917" y="522" width="270" height="42" rx="6" fill="#25322E"/>
+    <rect x="248" y="581" width="280" height="42" rx="6" fill="#26302D"/><rect x="540" y="581" width="365" height="42" rx="6" fill="#374D38"/><text x="558" y="609" fill="#D6E7CD" font-size="20">Voice + sound</text><rect x="917" y="581" width="270" height="42" rx="6" fill="#26302D"/>
+    <rect x="534" y="455" width="377" height="176" rx="10" fill="none" stroke="#C5F541" stroke-dasharray="5 5" opacity=".7"/>
+    <g fill="#F0F5E5" font-size="24" font-weight="700"><text x="66" y="718">01 / Brief</text><text x="372" y="718">02 / Edit</text><text x="666" y="718">03 / Verify</text><text x="998" y="718">04 / Export</text></g>
+    <g fill="none" stroke="#6F855A" stroke-width="2"><path d="M238 710h92m-8-6 8 6-8 6"/><path d="M528 710h92m-8-6 8 6-8 6"/><path d="M850 710h92m-8-6 8 6-8 6"/></g>
+  </g>
+</svg>
