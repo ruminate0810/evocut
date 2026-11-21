@@ -69,6 +69,9 @@ EvoCut **renders video from HTML** — a composition is an HTML file whose DOM d
 
 ## 1. Start from project state
 
+For progressive red highlights, custom colors and other timed foreground caption
+styles, use [short-form caption rails](references/shortform-captions.md).
+
 Apply the first matching row; do not evaluate lower state rows:
 
 | State                                                                                                                         | Action                                                                                                                                                                                                                                 |

@@ -17,10 +17,22 @@ Edit clips, preview changes, export MP4, and check the result.
 ## What it does
 
 - **Edit:** cut and move supported linked footage, captions and audio, with conflict checks and undo.
+- **Caption:** [apply progressive highlights](tools/evocut/skills-src/evocut/references/shortform-captions.md) with a red active marker, or select a custom color from the offline picker.
 - **Organize:** search local assets and keep voice profiles and pronunciation rules.
 - **Deliver:** preview a project, export an MP4, and check the exported file.
 
 Bring a desktop agent that can read files and run commands. EvoCut supplies the editing tools and skills—not a video-generation model. No Codex installation is required for core editing. [Capabilities and limits →](docs/FEATURES.md)
+
+Already have a checkout-local release from an earlier revision? Pulling source
+does not change its active snapshot. To enable the new caption tools with your
+existing engine (standard checkout-local home), run from the checkout:
+
+```sh
+node scripts/cli.mjs release stage --engine-root .evocut-home/current/engine --skills-source tools/evocut/skills-src --id progressive-red-v1 --apply
+node scripts/cli.mjs release validate progressive-red-v1
+node scripts/cli.mjs release promote progressive-red-v1 --apply
+node scripts/cli.mjs caption-style palette --json
+```
 
 ## Examples
 

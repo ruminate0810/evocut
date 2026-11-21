@@ -95,12 +95,13 @@ export function launcherEnv(env=process.env,home=os.homedir()) {
 }
 export async function main(argv=process.argv.slice(2)) {
   const opts=parseArgs(argv);
-  const localCommand=new Set(['release','assets','voice','edit','qa','brand','about']).has(opts.args[0]);
+  const localCommand=new Set(['release','assets','voice','edit','qa','brand','about','caption-style']).has(opts.args[0]);
   if(localCommand&&opts.resolveOnly)throw new Error('--resolve-engine cannot be combined with local extension commands; no extension action was executed. Run it separately in the project directory.');
   if(localCommand&&opts.version&&!(opts.args[0]==='edit'&&opts.args[1]==='plan'))throw new Error('--engine-version is only supported for engine commands and edit plan; no extension action was executed.');
   if(opts.args.length===1&&['--help','-h'].includes(opts.args[0]))console.log('EvoCut local extensions:\n  release   stage / validate / promote / rollback shared releases\n  assets    Chinese search / tags / local preview / explicit import\n  voice     fixed voice profiles and neutral synthesis requests\n  edit      conservative linked cut / move / undo / remake plans\n  qa        typed offline QA, with separate human review\nRun evocut <extension> --help. Engine commands follow below.\n');
   if(opts.args[0]==='release') {const {main:run}=await import('./release-manager.mjs');process.exitCode=await run(opts.args.slice(1));return;}
-  const local={assets:'media-library.mjs',voice:'voice-profile.mjs',edit:'semantic-edit.mjs'};
+  if(opts.args.length===1&&['--help','-h'].includes(opts.args[0]))console.log('  caption-style   list / palette / apply timed caption presets\n');
+  const local={assets:'media-library.mjs',voice:'voice-profile.mjs',edit:'semantic-edit.mjs','caption-style':'caption-style.mjs'};
   if(local[opts.args[0]]){const {main:run}=await import(pathToFileURL(releaseModule(local[opts.args[0]])).href);const extensionArgs=opts.args.slice(1);if(opts.version)extensionArgs.push('--engine-version',opts.version);const code=await run(extensionArgs);if(Number.isInteger(code))process.exitCode=code;return;}
   if(opts.args[0]==='qa') {
     const entry=releaseModule('../video_qa/quality_gate.py');

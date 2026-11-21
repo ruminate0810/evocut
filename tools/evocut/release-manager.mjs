@@ -13,7 +13,7 @@ export const SKILL_NAMES = ['evocut','evocut-animation','evocut-audio','evocut-c
 const ALIASES = Object.fromEntries(SKILL_NAMES.filter(n=>n==='evocut'||n.startsWith('evocut-')||n==='remotion-to-evocut').map(n=>[n.replace('evocut','hyperframes'),n]));
 const SKIP = new Set(['.git','__pycache__','.DS_Store']);
 const RELEASE_METADATA = new Set(['release.json','validation.json']);
-const NODE_RELEASE_TESTS = ['evocut.test.mjs','release-manager.test.mjs','media-library.test.mjs','voice-profile.test.mjs','semantic-edit.test.mjs','render-receipt.test.mjs'];
+const NODE_RELEASE_TESTS = ['evocut.test.mjs','release-manager.test.mjs','media-library.test.mjs','voice-profile.test.mjs','semantic-edit.test.mjs','render-receipt.test.mjs','caption-style.test.mjs'];
 export const sha = data => crypto.createHash('sha256').update(data).digest('hex');
 export const configHome = (home=os.homedir(), env=process.env) => path.resolve(env.EVOCUT_HOME || path.join(home,'.config/evocut'));
 const readJSON = p => JSON.parse(fs.readFileSync(p,'utf8'));

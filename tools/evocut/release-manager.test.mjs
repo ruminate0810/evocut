@@ -152,7 +152,7 @@ test('releaseModule rejects same-byte external links and paths outside tool dire
 });
 test('render-receipt test is mandatory and actually runs in isolated validation',t=>{
   const s=sources(fixture(t));
-  for(const name of ['evocut','release-manager','media-library','voice-profile','semantic-edit'])put(path.join(s.toolDir,`${name}.test.mjs`),`import test from 'node:test'; test('${name} fixture',()=>{});`);
+  for(const name of ['evocut','release-manager','media-library','voice-profile','semantic-edit','caption-style'])put(path.join(s.toolDir,`${name}.test.mjs`),`import test from 'node:test'; test('${name} fixture',()=>{});`);
   stage(s);assert.throws(()=>validateRelease('v1',{home:s.home}),/Required release test missing: render-receipt.test.mjs/);
   put(path.join(s.toolDir,'render-receipt.test.mjs'),"import test from 'node:test'; test('render-receipt required fixture executed',()=>{});");
   put(path.join(s.qaDir,'test_quality_gate.py'),'import unittest\nclass Fixture(unittest.TestCase):\n def test_ok(self): self.assertTrue(True)\n');
