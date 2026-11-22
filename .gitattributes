@@ -6,3 +6,4 @@ tools/evocut/skills-src/embedded-captions/assets/strokefonts/** -whitespace
 LICENSE -whitespace
 tools/evocut/upstream-LICENSE.txt -whitespace
 licenses/** -whitespace
+sound-packs/*/licenses/** -whitespace

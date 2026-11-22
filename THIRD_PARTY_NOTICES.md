@@ -8,7 +8,8 @@
 | Hershey SVG stroke fonts | Attribution/restricted-format license embedded in each SVG metadata block | Textual font sources retained with their complete original notices |
 | talking-head-recut / vtake-skills | MIT; skill-local NOTICE.md | Adapted source guidance and HTML recipes |
 | EvoCut original code, brand SVGs, and hello example screenshot | Apache-2.0 | Included; the screenshot shows the included original title-card composition; no trademark-clearance claim |
-| Stock SFX, music and footage | Provider-specific, including Pixabay Content License | Binary media deliberately not redistributed |
+| Legacy stock SFX, music and footage | Provider-specific, including Pixabay Content License | Binary media deliberately not redistributed |
+| Optional Studio SFX pack | 415 CC0 recordings, 202 Apache-2.0 procedural cues; FSD50K metadata CC BY 4.0 | Available separately as a release ZIP; see [track credits and notices](sound-packs/studio-617/NOTICES.md) |
 | Third-party font files and example screenshots | Individual rights not fully documented in local source | Binary assets deliberately not redistributed |
 | GSAP | Separate GSAP license, https://gsap.com/standard-license/ | Vendor binary omitted; examples may reference external/user-installed GSAP |
 

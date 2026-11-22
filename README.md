@@ -19,6 +19,7 @@ Edit clips, preview changes, export MP4, and check the result.
 - **Edit:** cut and move supported linked footage, captions and audio, with conflict checks and undo.
 - **Caption:** [apply progressive highlights](tools/evocut/skills-src/evocut/references/shortform-captions.md) with a red active marker, or select a custom color from the offline picker.
 - **Organize:** search local assets and keep voice profiles and pronunciation rules.
+- **Sound:** [download 617 offline effects](sound-packs/studio-617/README.md), audition them in a browser, or import them into your shared media library.
 - **Deliver:** preview a project, export an MP4, and check the exported file.
 
 Bring a desktop agent that can read files and run commands. EvoCut supplies the editing tools and skills—not a video-generation model. No Codex installation is required for core editing. [Capabilities and limits →](docs/FEATURES.md)

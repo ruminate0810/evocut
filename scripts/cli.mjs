@@ -6,10 +6,14 @@ process.env.EVOCUT_HOME ??= path.resolve(path.dirname(fileURLToPath(import.meta.
 const {applyHostEnvironment, main} = await import('./host.mjs');
 try {
   applyHostEnvironment();
-  if (['env', 'agent'].includes(process.argv[2])) {
+  if (process.argv[2] === 'sound-pack') {
+    const {runSoundPack} = await import('./sound-pack.mjs');
+    runSoundPack(process.argv.slice(3));
+  } else if (['env', 'agent'].includes(process.argv[2])) {
     process.exitCode = await main(process.argv.slice(2));
   } else {
     if (['--help', '-h'].includes(process.argv[2])) {
+      console.log('Offline sounds: sound-pack <extracted-folder> [--apply]');
       console.log('Portable setup: env doctor | env init | env prepare | agent instructions | agent install\nRun env --help or agent --help. Setup commands are checkout-local.');
     }
     await import('../tools/evocut/launch.mjs');
